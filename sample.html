@@ -2,11 +2,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </header>
 
+<h1 style="text-align: center;">シフト検索</h1>
+
+<div class="frame"> 
+  <button class="custom-btn btn-1"><span>名前から検索(当日)</span></button>
+  <button class="custom-btn btn-2"><span>内容から検索(当日)</span></button>
+</div>
+
 <style>
 body {
   background: #e0e5ec;
 }
-
 .frame {
   width: 90%;
   margin: 40px auto;
@@ -20,7 +26,7 @@ button {
 .custom-btn {
   width: 180px;
   height: 50px;
-  color: #fff;
+  color: #fff
   border-radius: 5px;
   padding: 10px 25px;
   font-family: 'Lato', sans-serif;
@@ -30,9 +36,9 @@ button {
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-    7px 7px 20px 0px rgba(0, 0, 0, .1),
-    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
 }
 
@@ -41,7 +47,6 @@ button {
   border: none;
   color: #000;
 }
-
 .custom-btn:after {
   position: absolute;
   content: "";
@@ -51,48 +56,22 @@ button {
   left: 0;
   direction: rtl;
   z-index: -1;
-  box-shadow: -7px -7px 20px 0px #fff9,
-    -4px -4px 5px 0px #fff9,
-    7px 7px 20px 0px #0002,
-    4px 4px 5px 0px #0001;
+  box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
-
 .custom-btn:hover {
   color: #000;
 }
-
 .custom-btn:hover:after {
   left: auto;
   right: 0;
   width: 100%;
 }
-
 .custom-btn:active {
   top: 2px;
 }
-
-@media only screen and (max-width: 600px) {
-  .frame {
-    width: 100%;
-    margin: 20px auto;
-  }
-
-  button {
-    margin: 10px;
-  }
-
-  .custom-btn {
-    width: 150px;
-    height: 40px;
-    font-size: 14px;
-  }
-}
 </style>
-
-<h1 style="text-align: center;">シフト検索</h1>
-
-<div class="frame">
-  <button class="custom-btn btn-1"><span>名前から検索(当日)</span></button>
-  <button class="custom-btn btn-2"><span>内容から検索(当日)</span></button>
-</div>
