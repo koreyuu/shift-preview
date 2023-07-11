@@ -1,85 +1,98 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<header>
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #e0e5ec;
-    }
+</header>
 
-    .frame {
-      width: 90%;
-      margin: 40px auto;
-      text-align: center;
-    }
+<style>
+body {
+  background: #e0e5ec;
+}
 
-    button {
-      margin: 20px;
-    }
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
 
-    .custom-btn {
-      width: 180px;
-      height: 50px;
-      color: #fff;
-      border-radius: 5px;
-      padding: 10px 25px;
-      font-family: 'Lato', sans-serif;
-      font-weight: 500;
-      background: transparent;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      display: inline-block;
-      box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-        7px 7px 20px 0px rgba(0,0,0,.1),
-        4px 4px 5px 0px rgba(0,0,0,.1);
-      outline: none;
-    }
+button {
+  margin: 20px;
+}
 
-    .custom-btn {
-      border: none;
-      color: #000;
-    }
+.custom-btn {
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
 
-    .custom-btn:after {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 100%;
-      top: 0;
-      left: 0;
-      direction: rtl;
-      z-index: -1;
-      box-shadow:
-        -7px -7px 20px 0px #fff9,
-        -4px -4px 5px 0px #fff9,
-        7px 7px 20px 0px #0002,
-        4px 4px 5px 0px #0001;
-      transition: all 0.3s ease;
-    }
+/* 1 */
+.custom-btn {
+  border: none;
+  color: #000;
+}
 
-    .custom-btn:hover {
-      color: #000;
-    }
+.custom-btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
 
-    .custom-btn:hover:after {
-      left: auto;
-      right: 0;
-      width: 100%;
-    }
+.custom-btn:hover {
+  color: #000;
+}
 
-    .custom-btn:active {
-      top: 2px;
-    }
-  </style>
-</head>
-<body>
-  <h1 style="text-align: center;">シフト検索</h1>
+.custom-btn:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
 
-  <div class="frame">
-    <button class="custom-btn btn-1"><span>名前から検索(当日)</span></button>
-    <button class="custom-btn btn-2"><span>内容から検索(当日)</span></button>
-  </div>
-</body>
-</html>
+.custom-btn:active {
+  top: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .frame {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  button {
+    margin: 10px;
+  }
+
+  .custom-btn {
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+</style>
+
+<h1 style="text-align: center;">シフト検索</h1>
+
+<div class="frame">
+  <button class="custom-btn btn-1" onclick="location.href='./nametoshift.html'"><span>名前から検索(当日)</span></button>
+  <button class="custom-btn btn-2" onclick="location.href='./shifttoname.html'"><span>内容から検索(当日)</span></button>
+</div>
