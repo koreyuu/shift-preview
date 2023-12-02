@@ -55,7 +55,7 @@ for (let i = 0; i < data.length; i++) {
     let messageHTML = `<p>Assistant: ${name}さんのシフトを表示します。</p>`;
 
     for (let i = 0; i < matchingValues.length; i++) {
-      const hour = Math.floor(i / 6) + 5; // 時間（5から始まる）
+      const hour = Math.floor(i / 6) + 7; // 時間（7から始まる）
       const minute = (i % 6) * 10; // 分（0, 10, 20, 30, 40, 50）
       const hourString = hour.toString().padStart(2, '0'); // 時間を2桁にする
       const minuteString = minute.toString().padStart(2, '0'); // 分を2桁にする
